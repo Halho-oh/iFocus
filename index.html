@@ -18,11 +18,6 @@
 </head>
 <body>
     <div class="form-container">
-        <label for="screenTitle">iFM_Top</label>
-        <input type="text" id="screenTitle" value="iFM_Top" readonly />
-
-        <label for="workCategory">作業分類</label>
-        <input type="text" id="workCategory" value="作業内容を選択" readonly />
 
         <label for="workSelect">作業選択</label>
         <select id="workSelect">
@@ -32,17 +27,11 @@
             <option value="task1">タスク3</option>
         </select>
 
-        <label for="workTime">作業時間</label>
-        <input type="text" id="workTime" value="00:00" readonly />
-
         <label for="endTime">作業終了時刻</label>
         <input type="time" id="endTime" />
 
-        <label for="memo">作業内容メモ</label>
-        <textarea id="memo" readonly>ここにメモが表示されます</textarea>
-
         <label for="workInput">作業内容入力</label>
-        <input type="text" id="workInput" placeholder="ここに自由記述" />
+        <input type="text" id="workInput" />
 
         <button id="startBtn">開始</button>
         <button id="cancelBtn" class="cancel">キャンセル</button>
