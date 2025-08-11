@@ -1,5 +1,5 @@
 self.addEventListener('install', e => {
-    e.waitUntill(
+    e.waitUntil(
         caches.open('focus-manager-v1').then(cache => {
             return cache.addAll([
                 './',
