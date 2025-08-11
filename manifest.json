@@ -1,9 +1,10 @@
 {
-    "name": "Focus Manager",
-    "short_name": "Focus",
+    "name": "iOS Focus Manager",
+    "short_name": "Focus Manager",
     "start_url": "./index.html",
     "display": "standalone",
-    "background_color": "#2c3e50",
+    "background_color": "#ffffff",
+    "theme_color": "#007aff",
     "icons": [
         {
             "src": "icons/icon-192.png",
