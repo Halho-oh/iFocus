@@ -21,7 +21,7 @@ body {
     display: block;
     margin-top: 10px;
     max-width: 400px;
-    padding: 20px;
+    padding: 13px;
     border-radius: 20px;
     background-color: var(--bg-color);
     box-shadow: var(--shadow);
