@@ -1,163 +1,175 @@
 /* 背景全体 */
-body {
+html, body {
     margin: 0;
     padding: 0;
     background-color: var(--page-bg);
+    color: var(--text-color);
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    height: 100%;
+}
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* 常に画面中央に配置 */
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    min-height: 100vh;
 }
 
 /* コンテナ */
 .form-container {
-    width: 90%;
+    display: block;
+    margin-top: 16px;
     max-width: 400px;
-    margin: 2rem auto;
-    padding: 1rem 2rem;
+    padding: 20px;
     border-radius: 20px;
     background-color: var(--bg-color);
-    color: var(--text-color);
     box-shadow: var(--shadow);
 }
 /* ラベル */
 .form-container label {
     display: block;
-    margin-top: block;
+    margin-top: 16px;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 15px;
 }
-/* テキスト、タイム、セレクト */
+/* 共通リセット */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 共通入力 */
 input[type="text"],
 input[type="time"],
-select,
-textarea {
+select {
+    display: block;
     width: 100%;
-    padding: 12px 16px;
-    margin-top: 0.3rem;
+    max-width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    margin-top: 6px;
     border: none;
     border-radius: 14px;
     background-color: var(--input-bg);
     color: var(--input-text);
-    font-size: 1rem;
+    font-size: 16px;
     box-shadow: var(--input-shadow);
-    transition: background-color 0.3s ease, color 0.3s ease;
-    font-family: inherit;
     -webkit-appearance: none;
     appearance: none;
 }
-/* テキストエリア */
-textarea {
-    min-height: 80px;
-    resize: vertical;
-}
 
 /* フォーカス時 */
-input[type="text"]:focus,
-input[type="time"]:focus,
-select:focus,
-textarea:focus {
+input:focus,
+input:focus {
     outline: none;
     background-color: var(--input-bg-focus);
     box-shadow: var(--input-shadow-focus);
 }
+
 /* ボタン */
 button {
-    margin-top: 2rem;
     width: 100%;
-    padding: 14px 0;
-    font-size: 1.2rem;
-    font-weight: 700;
-    border-radius: 18px;
+    height: 48px;
+    margin-top: 20px;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 14px;
     border: none;
-    background-color: var(--btn-bg);
-    color: var(--btn-text);
-    box-shadow: var(--btn-shadow);
     cursor: pointer;
-    transition: background-color 0.3s ease;
     font-family: inherit;
-}
-
-button:hover {
-    background-color: var(--btn-bg-hover);
+    transition: all 0.2s ease;
 }
 
 button:active {
+    transform: scale(0.97);
+}
+
+/* 開始ボタン */
+#startBtn {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    box-shadow: var(--btn-shadow);
+}
+
+#startBtn:hover {
+    background-color: var(--btn-bg-hover);
+}
+
+#startBtn:active {
     background-color: var(--btn-bg-active);
     box-shadow: var(--btn-shadow-active);
 }
 
-/* キャンセルボタン用 */
-button.cancel {
+/* キャンセルボタン */
+.cancel {
     background-color: var(--btn-cancel-bg);
     color: var(--btn-cancel-text);
     box-shadow: var(--btn-cancel-shadow);
 }
 
-button.cancel:hover {
+.cancel:hover {
     background-color: var(--btn-cancel-bg-hover);
 }
 
-button.cancel:active {
+.cancel:active {
     background-color: var(--btn-cancel-bg-active);
     box-shadow: var(--btn-cancel-shadow-active);
 }
 
-/* ライトテーマの変数 */
+/* ライトテーマ */
 :root {
     --page-bg: #ffffff;
-    --bg-color: #f8f8f8;
-    --text-color: #222222;
-    --shadow: 0 4px 10px rgba(0,0,0,0.1);
+    --bg-color: #f9f9f9;
+    --text-color: #1c1c1e;
+    --shadow: 0 4px 10px rgba(0,0,0,0.05);
 
-    --input-bg: #fff;
-    --input-text: #222;
+    --input-bg: #ffffff;
+    --input-text: #1c1c1e;
     --input-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
-    --input-bg-focus: #e8f0fe;
-    --input-shadow-focus: 0 0 5px 2px #5b9cff;
+    --input-bg-focus: #e5f0ff;
+    --input-shadow-focus: 0 0 5px 2px rgba(0,122,255,0.5);
 
     --btn-bg: #007aff;
-    --btn-text: #fff;
-    --btn-shadow: 0 4px 10px rgba(0,122,255,0.5);
-    --btn-bg-hover: #005ecb;
-    --btn-bg-active: #004bb5;
-    --btn-shadow-active: 0 2px 5px rgba(0,75,181,0.7);
+    --btn-text: #ffffff;
+    --btn-shadow: 0 4px 10px rgba(0,122,255,0.3);
+    --btn-bg-hover: #0066d6;
+    --btn-bg-active: #0051a8;
+    --btn-shadow-active: 0 2px 5px rgba(0,80,180,0.4);
 
     --btn-cancel-bg: #e0e0e0;
     --btn-cancel-text: #444;
-    --btn-cancel-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    --btn-cancel-shadow: 0 4px 8px rgba(0,0,0,0.05);
     --btn-cancel-bg-hover: #c6c6c6;
     --btn-cancel-bg-active: #a8a8a8;
-    --btn-cancel-shadow-active: 0 2px 5px rgba(0,0,0,0.15);
+    --btn-cancel-shadow-active: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 /* ダークテーマの変数 */
 @media (prefers-color-scheme: dark) {
     :root {
-        --page-bg: #121212;
+        --page-bg: #000000;
         --bg-color: #1c1c1e;
         --text-color: #f2f2f7;
-        --shadow: 0 4px 15px rgba(0,0,0,0.8);
+        --shadow: 0 4px 15px rgba(0,0,0,0.7);
 
         --input-bg: #2c2c2e;
-        --input-text: #eee;
-        --input-shadow: inset 0 1px 3px rgba(255,255,255,0.1);
+        --input-text: #f2f2f7;
+        --input-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);
         --input-bg-focus: #3a3a3c;
-        --input-shadow-focus: 0 0 8px 2px #60a5fa;
+        --input-shadow-focus: 0 0 0 2px rgba(10,132,255,0.6);
 
         --btn-bg: #0a84ff;
-        --btn-text: #fff;
-        --btn-shadow: 0 4px 10px rgba(10,132,255,0.7);
-        --btn-bg-hover: #0051a8;
-        --btn-bg-active: #003f7d;
-        --btn-shadow-active: 0 2px 5px rgba(0,63,125,0.9);
+        --btn-text: #ffffff;
+        --btn-shadow: 0 4px 8px rgba(10,132,255,0.3);
+        --btn-bg-hover: #0066d6;
+        --btn-bg-active: #0051a8;
+        --btn-shadow-active: 0 2px 4px rgba(0,80,180,0.4);
 
         --btn-cancel-bg: #3a3a3c;
         --btn-cancel-text: #bbb;
-        --btn-cancel-shadow: 0 4px 10px rgba(255,255,255,0.05);
+        --btn-cancel-shadow: 0 4px 8px rgba(255,255,255,0.05);
         --btn-cancel-bg-hover: #2a2a2c;
         --btn-cancel-bg-active: #1a1a1c;
-        --btn-cancel-shadow-active: 0 2px 5px rgba(255,255,255,0.1);
+        --btn-cancel-shadow-active: 0 2px 4px rgba(255,255,255,0.1);
     }
 }
