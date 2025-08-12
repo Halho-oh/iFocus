@@ -59,13 +59,18 @@ select {
 }
 
 /* 時刻入力のみ調整 */
+input[type="time"] {
+    text-align: left; 
+    line-height: 50px;
+    padding-left: 14px;
+    font-family: inherit;
+}
+
 input[type="time"]::-webkit-calendar-picker-indicator {
     opacity: 0;
     pointer-events: none;
     text-align: left;
     align-items: center;
-    padding-left: 14px;
-    font-family: inherit;
 }
 
 /* フォーカス時 */
