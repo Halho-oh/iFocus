@@ -2,18 +2,8 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>iFocus</title>
-
-    <!-- PWAマニフェスト -->
-    <link rel="manifest" href="manifest.json" />
-    <meta name="theme-color" content="#000000" />
-
-    <!-- iOS向け設定 -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
-
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -22,9 +12,12 @@
         <label for="workSelect">作業選択</label>
         <select id="workSelect">
             <option value="">選択してください</option>
-            <option value="task1">タスク1</option>
-            <option value="task1">タスク2</option>
-            <option value="task1">タスク3</option>
+            <option value="work">仕事</option>
+            <option value="study">勉強</option>
+            <option value="fitness">フィットネス</option>
+            <option value="gaming">ゲーム</option>
+            <option value="design">デザイン</option>
+            <option value="task">タスク</option>
         </select>
 
         <label for="endTime">作業終了時刻</label>
